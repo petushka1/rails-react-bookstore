@@ -1,7 +1,8 @@
 import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Books from './components/books';
+import Books from './components/Books';
+import NavBar from './components/Nav/Navbar';
 
 const API_URL = 'http://localhost:3000/api/v1/books';
 
@@ -21,7 +22,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <NavBar />
       <Books books={books} />
     </div>
   );

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../css/BooksStyles.css';
 
 const Books = (props) => {
   const { books } = props;
   return (
-    <div>
+    <div className='books'>
       <h1>These books are from the API</h1>
       {books.map((book) => (
         <div key={book.id}>
