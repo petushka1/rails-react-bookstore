@@ -1,19 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../css/BooksStyles.css';
+import { Link } from 'react-router-dom';
+import styles from '../css/Books.module.css';
 
 const Books = (props) => {
   const { books } = props;
   return (
-    <div className='books'>
-      <h1>These books are from the API</h1>
-      {books.map((book) => (
-        <div key={book.id}>
-          <h2>{book.title}</h2>
-          <p>{book.body}</p>
+      books.map((book) => (
+        <div 
+        key={book.id}
+        book={book}>
+          <Link to={`/books/${book.id}`}>
+            <div>
+              <h2>{book.title}</h2>
+              <h3>{book.author}</h3>x
+            </div>
+          </Link>
+          
+          <Link to={`/books/${book.id}`}>
+            View Details
+          </Link>
         </div>
-      ))}
-    </div>
+      ))
   );
 };
 
