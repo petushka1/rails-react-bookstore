@@ -1,0 +1,9 @@
+Insert:
+
+Book.create(title:'The first Book', body:'This is the book from API', author:'Book Author', cover:'cover_1.png')
+Book.create(title:'Second Book', body:'This is another book from API', author:'2nd Book Author', cover:'cover_2.png')
+Book.create(title:'Third Book', body:'This is the third book from API', author:'3nd Book Author', cover:'cover_3.png')
+
+Book.create(title:'Forth Book', body:'This is the forth book from API', author:'4nd Book Author')
+
+C:\Users\Nadya\rails-react-bookstore\bookstore-frontend\public\img\cover_1.png

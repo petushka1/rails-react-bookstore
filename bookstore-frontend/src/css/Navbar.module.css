@@ -1,11 +1,12 @@
 .nav {
-    height: 65px;
-    border-bottom: 2px solid black;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+  height: 65px;
+  border-bottom: 2px solid black;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    padding: 15px 0;
+  font-weight: 700;
 }

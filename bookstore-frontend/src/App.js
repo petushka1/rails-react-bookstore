@@ -1,11 +1,13 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Routes, Route, useParams } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Books from './components/Books';
 import Book from './components/Book';
 import NavBar from './components/Nav/Navbar';
+import Favorites from './components/Favorites';
+import New from './components/New';
 
 
 export const API_URL = 'http://localhost:3000/api/v1/books';
@@ -28,12 +30,13 @@ function App() {
   
   return (
     <div className="App">
-      <Routes>
-        <Route path='books' element={<Books />} />
-        <Route path='books/:bookId' element={<Book />} />
-       </Routes>
       <NavBar />
-      <Books books={books} />
+      <Routes>
+        <Route path='/' element={<Books books={books} />} />
+        <Route path=':bookId' element={<Book />} />
+        <Route path='mybooks' element={<Favorites />} />
+        <Route path='new' element={<New />} />
+       </Routes>
     </div>
   );
 }
